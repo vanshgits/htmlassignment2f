@@ -1,0 +1,351 @@
+/* Resetting default styles and setting global styles */
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+	text-decoration: none;
+	list-style: none;
+	scroll-behavior: smooth;
+}
+
+/* Setting up custom variables for colors and font sizes */
+:root{
+	--text-color:  #054f98;
+	--main-color: #ff5733;
+	--second-color: #1e272e;
+	--bg-color: #ffffff;
+	--big-font: 4.5rem;
+	--h2-font: 2.6rem;
+	--p-font: 1.1rem;
+}
+
+/* Applying global styles to the body */
+body{
+	background: var(--bg-color);
+	color: var(--text-color);
+}
+
+/*Header Section*/
+header{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: white;
+	padding: 23px 15%;
+	transition: all .38s ease;
+}
+
+/* Styling the header logo text */
+.headerlogotext{
+	color: var(--main-color);
+
+}
+
+/* Styling for the header logo */
+.loger
+{
+	display: flex;
+	align-items: center;
+	color: var(--main-color);
+}
+.logo{
+	font-size: 30px;
+	font-weight: 700;
+	color: var(--text-color);
+}
+
+/* Styling for span elements */
+span{
+	color: var(--main-color);
+}
+
+
+/* Styling the navigation links */
+.navbar{
+	display: flex;
+}
+.navbar a{
+	color: var(--text-color);
+	font-size: var(--p-font);
+	font-weight: 600;
+	padding: 5px 10px;
+	margin: 2px 25px;
+	border-bottom: 2px solid transparent;
+	transition: all .38s ease;
+}
+
+/* Styling navigation links on hover */
+.navbar a:hover{
+	border-bottom: 2px solid var(--main-color);
+	color: var(--main-color);
+}
+
+/* Styling for header icons */
+.h-icons{
+	display: flex;
+	align-items: center;
+	padding: 10px 22px;
+	background: var(--main-color);
+	border-radius: 5rem;
+}
+.h-icons i{
+	font-size: 22px;
+	color: var(--bg-color);
+	margin-right: 15px;
+	margin-left: 8px;
+}
+
+/* Styling for sections */
+section{
+	padding: 90px 15% 80px;
+}
+
+/* Styling for the home section */
+.home{
+    margin-top: 10px;
+	height: auto;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	gap: 2rem;
+}
+/* Styling for home section image */
+.home-img img{
+	width: 100%;
+	height: 100%;
+	padding: 1%;
+}
+
+/* Styling for home section text */
+.home-text h1{
+	font-size: var(--big-font);
+	line-height: 1.2;
+	margin-bottom: 2rem;
+}
+.home-text p{
+	font-size: var(--p-font);
+	font-weight: 500;
+	color: var(--second-color);
+	line-height: 32px;
+	margin-bottom: 2.3rem;
+}
+.btn{
+	display: inline-block;
+	padding: 14px 26px;
+	background: var(--main-color);
+	color: var(--bg-color);
+	font-size: 15px;
+	font-weight: 600;
+	border-radius: 5rem;
+	transition: all .38s ease;
+	margin-top: 2%;
+}
+.btn:hover{
+	letter-spacing: .7px;
+}
+
+
+header.sticky{
+	padding: 10px 15%;
+	background: var(--bg-color);
+	box-shadow: 0px 4px 15px rgb(0 0 0 / 8%);
+}
+
+/* Styles for main text section aka menu intro*/
+.main-text h2{
+	text-align: center;
+	font-size: var(--h2-font);
+	margin-bottom: 10px;
+
+}
+.main-text p{
+	position: relative;
+	text-align: center;
+	font-size: var(--p-font);
+	font-weight: 500;
+	color: var(--second-color);
+	line-height: 32px;
+}
+
+/* Styles for menu content */
+.menu-content{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+	gap: 2rem;
+	align-items: center;
+	margin-top: 4rem;
+	cursor: pointer;
+}
+
+/* Styles for menu items */
+.row img{
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+	object-fit: cover;
+}
+.row{
+	transition: all .40s ease;
+}
+/* Styles for menu item text */
+.menu-text{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px 0;
+}
+.menu-left h4{
+	font-size: 23px;
+}
+.row p{
+	color: var(--second-color);
+	font-size: 15px;
+	line-height: 30px;
+	margin-bottom: 15px;
+}
+
+
+/* Styles for the about section */
+.about{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	gap: 2rem;
+}
+
+/* Styles for about section header */
+.abouthead{
+	width: 100%;
+	height: auto;
+	
+	color: var(--text-color);
+	text-align: center;
+}
+.abouthead h2{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+/* Styles for about section image */
+.about-img img{
+	height: auto;
+	width: 100%;
+	padding: 5%;
+}
+
+/* Styles for about section text */
+.about-text h2{
+	font-size: var(--h2-font);
+	margin-bottom: 2rem;
+	line-height: 1.3;
+}
+.about-text p{
+	font-size: var(--p-font);
+	color: var(--second-color);
+	font-weight: 500;
+	line-height: 32px;
+	margin-bottom: 2.3rem;
+}
+
+/* Styles for the contact section */
+.main-contact{
+	text-align: center;
+	justify-content: center;
+	gap: 2rem;
+}
+/* Styles for email  */
+.emailon{
+	color: var(--text-color);
+	font-style: italic;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1690px){
+	section{
+		padding: 70px 2%;
+		transition: .20s;
+	}
+	header{
+		padding: 11px 2%;
+		transition: .20s;
+	}
+	header.sticky{
+		padding: 8px 2%;
+		transition: .20s;
+	}
+	
+}
+@media (max-width: 1290px){
+	:root{
+		--big-font: 3.2rem;
+		--h2-font: 2rem;
+		--p-font: 1rem;
+		transition: .20s;
+	}
+	.home{
+		height: 80vh;
+	}
+	.main-text{
+		text-align: center;
+	}
+}
+@media (max-width: 880px){
+	
+	.navbar{
+		position: absolute;
+		top: 100%;
+		right: -100%;
+		width: 250px;
+		height: 110vh;
+		background: #fff;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 180px 40px;
+		transition: all .40s ease;
+	}
+	
+
+}
+@media (max-width: 820px){
+	:root{
+		--big-font: 3rem;
+		--h2-font: 1.8rem;
+		transition: .20s;
+	}
+	
+	.home-img{
+		text-align: center;
+	}
+	.home-img img{
+		width: 100%;
+		height: auto;
+		max-width: 500px;
+	}
+	.home-text{
+		padding-top: 50px;
+	}
+	.about{
+		grid-template-columns: 1fr;
+	}
+	.about-img{
+		text-align: center;
+	}
+	.about-img img{
+		height: auto;
+		max-width: 500px;
+		width: 100%;
+	}
+}
+@media (max-height: 680px){
+	.container{
+		margin-top: 150px;
+	}
+}

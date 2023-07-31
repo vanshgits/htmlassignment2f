@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Web title -->
+    <title>order web</title>
+
+    <!-- Adding Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    >
+    <!-- Adding Bootstrap Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+
+    <!-- Linking css file -->
+    <link rel="stylesheet" href="./css/orderstyle.css" >
+
+    <!-- External java script file linking -->
+    <script src="./java/order.js"></script>
+  </head>
+  <body>
+    <header>
+      <!-- web logo and icons -->
+      <div class="loger">
+        <a href="index.html" class="logo"
+          ><img src="./img/pngegg.png" alt="logo"
+        ></a>
+        <a href="order.html" class="headerlogotext"><h2>Pizza Buddy</h2></a>
+      </div>
+      <!-- home button for return to main page -->
+      <div class="h-icons">
+        <a href="index.html"><div class="homebtn"><i class="bi bi-house"></i></div></a>
+      </div>
+    </header>
+
+    <!-- main function starts -->
+    <main class="mainstart">
+      <!-- form title -->
+      <h2 class="title">Let's Order</h2>
+
+      <!-- form starts -->
+      <form id="orderForm" method="post">
+
+        <!-- Pizza options -->
+        <div class="ordermenu">
+          <label for="menu">Pizza options</label>
+          <select name="menu" id="menu" class="pizzaselect">
+            <option value="recommended">Our popular combo</option>
+            <option value="Extravaga">ExtravaganZZa</option>
+            <option value="meatzza">MeatZZa</option>
+            <option value="pepperonifeast">Pepperoni Feast</option>
+            <option value="delux">Delux</option>
+            <option value="safp">Spinach and Feta Pizza</option>
+            <option value="pvp">Pacific Veggie Pizza</option>
+            <option value="6cp">6 Cheese Pizza</option>
+            <option value="custom">Customize your own pizza</option>
+          </select>
+        </div>
+
+        <!-- Size & Dough -->
+        <div class="size">
+          <h3 class="title2">Size & Dough</h3>
+          <div class="size1">
+            <div>
+              <input type="radio" name="size" id="smallsize" required >
+              <label for="smallsize">Small</label>
+            </div>
+
+            <div>
+              <input type="radio" name="size" id="largesize" >
+              <label for="largesize">Large</label>
+            </div>
+            <div>
+              <input type="radio" name="size" id="xlargesize" >
+              <label for="xlargesize">X-large</label>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="size1">
+            <div>
+              <input type="radio" name="crust" id="tcrust" required >
+              <label for="tcrust">Thin crust</label>
+            </div>
+            <div>
+              <input type="radio" name="crust" id="rcrust" >
+              <label for="rcrust">Regular</label>
+            </div>
+            <div>
+              <input type="radio" name="crust" id="icrust" >
+              <label for="icrust">Thick Crust</label>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="size">
+            <h3 class="title2">Quantity</h3>
+            <div class="quant">
+            <input type="number" id="number" placeholder="enter numbers of pizzas" class="quantity">
+            </div>
+            <!-- Base Sauce -->
+          <h3 class="title2">Base sauce</h3>
+          <div class="size1">
+            <!-- Base sauce options -->
+            <div>
+              <input type="radio" name="sauce" id="nsauce" required >
+              <label for="nsauce">No Sauce</label>
+            </div>
+            <div>
+              <input type="radio" name="sauce" id="bcsauce" >
+              <label for="bcsauce">Butter Chicken Sauce</label>
+            </div>
+
+            <div>
+              <input type="radio" name="sauce" id="cgsauce" >
+              <label for="cgsauce">Creamy Garlic Sauce</label>
+            </div>
+            <div>
+              <input type="radio" name="sauce" id="itsauce" >
+              <label for="itsauce">Italian Tomato Sauce</label>
+            </div>
+          </div>
+
+          <!-- Base Cheese -->
+          <h3 class="title2">Base Cheese</h3>
+          <div class="size1">
+            <div>
+                <!-- Base cheese options -->
+              <input type="radio" name="basecheese" id="nocheese" required >
+              <label for="nocheese">No cheese</label>
+            </div>
+            <div>
+              <input type="radio" name="basecheese" id="dairyfree" >
+              <label for="dairyfree">Dairy-Free Cheeze</label>
+            </div>
+            <div>
+              <input type="radio" name="basecheese" id="mozzarella" >
+              <label for="mozzarella">Mozzarella</label>
+            </div>
+          </div>
+
+          <!-- Toppings -->
+          <h3 class="title2">Toppings</h3>
+          <div class="size1">
+            <!-- Topping options -->
+            <div>
+              <input type="checkbox" name="pepperoni" id="pepperoni" >
+              <label for="pepperoni">Pepperoni</label>
+            </div>
+            <div>
+              <input type="checkbox" name="ham" id="ham" >
+              <label for="ham">Ham</label>
+            </div>
+            <div>
+              <input type="checkbox" name="bacon" id="bacon" >
+              <label for="bacon">Bacon</label>
+            </div>
+            <div>
+              <input type="checkbox" name="chicken" id="chicken" >
+              <label for="chicken">Chicken</label>
+            </div>
+            <div>
+              <input type="checkbox" name="olives" id="olives" >
+              <label for="chicken">Olives</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personal Information -->
+        <div class="size">
+          <h3 class="title2">Personal Information</h3>
+          <div class="pinfo">
+            <!-- Name field -->
+            <div class="formelementp">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter Your Name"
+                required
+              >
+            </div>
+            <hr>
+            <!-- Email field -->
+            <div class="formelementp">
+              <label for="email">Email Address</label>
+
+              <input
+                type="email"
+                id="email"
+                class="emailid"
+                placeholder="Enter your Email Id"
+                required
+              >
+            </div>
+            <hr>
+            <!-- phone field -->
+            <div class="formelementp">
+              <label for="phone">Contact number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                required
+                placeholder="123-123-1234"
+              >
+            </div>
+            <hr>
+          </div>
+        </div>
+
+        <!-- Delivery or Takeout -->
+        <div class="size">
+          <h3 class="title2">Delivery or Takeout</h3>
+          <div class="todparent">
+            <!-- Delivery and Takeout options -->
+            <div class="tod">
+              <input
+                type="radio"
+                name="orderOption"
+                value="custom"
+                id="deliveryOption"
+                onclick="changeContent1()"
+              >
+              <label for="deliveryOption">Delivery</label>
+            </div>
+            <div class="tod">
+              <input
+                type="radio"
+                name="orderOption"
+                value="takeout"
+                id="takeoutOption"
+                onclick="changeContent2()"
+              >
+              <label for="takeoutOption">Takeout</label><br >
+            </div>
+          </div>
+        </div>
+
+        <!-- Address for Delivery -->
+        <div id="show1" class="hide">
+          <div class="sizea">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" >
+          </div>
+        </div>
+
+        <!-- Timing for Takeout -->
+        <div id="show2" class="hide">
+          <div class="sizea">
+            <label for="timing">Takeout Timing:</label>
+            <input type="time" id="timing" name="timing" >
+          </div>
+        </div>
+
+        <!-- Special Instructions -->
+        <div class="menu">
+          <div class="size">
+            <h3 class="title2">Special Instructions</h3>
+            <div>
+              <textarea
+                name="instructions"
+                id="instructions"
+                cols="30"
+                rows="10"
+                class="textbox"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        
+        <!-- Submit Button -->
+        <div class="submitbtn">
+          <input type="submit" value="Go to payment page" class="submitbtn2" >
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
